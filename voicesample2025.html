@@ -21,7 +21,7 @@
         <!-- ヘッダーエリア -->
         <header class="text-center mb-8">
             <!-- プロフィール写真の追加 -->
-            <!-- Placeholderとしてアップロード画像を参照します。実際にアップロードする際は画像ファイルをサーバーに配置してください。 -->
+            <!-- main.jpg は、実際にアップロードする際のファイル名に合わせてください -->
             <div class="mb-4">
                 <img 
                     src="main.jpg" 
@@ -35,88 +35,92 @@
             <p class="text-xl font-semibold text-indigo-600">Voice Sample Access Portal</p>
         </header>
 
+        <!-- 【最終確定配置】アクセスボタンエリア (最優先) -->
+        <div class="space-y-4 mb-8">
+            <!-- ボタン1: WAVファイルダウンロード (検証用高音質データ) - メインのアクションとして強調 -->
+            <a href="https://drive.google.com/uc?export=download&id=1h8Tlge-HuUfm8ItQlxkDJ8mHlqKg1BOZ" target="_blank" id="wavLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-xl text-white bg-indigo-700 hover:bg-indigo-800 transition duration-300 ease-in-out transform hover:scale-[1.02] ring-4 ring-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 mr-3">
+                    <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.44-3.44a.75.75 0 111.06 1.06l-4.75 4.75a.75.75 0 01-1.06 0l-4.75-4.75a.75.75 0 111.06-1.06l3.44 3.44V3a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M15.75 16.75a.75.75 0 01-.75.75H9a.75.75 0 010-1.5h6a.75.75 0 01.75.75zM12 18.75a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                </svg>
+                高音質WAVファイルをダウンロード（検証用）
+            </a>
+            
+            <!-- ボタン2: YouTube (手軽な視聴) - セカンダリアクション -->
+            <a href="https://youtu.be/4z1G71539NI?si=W5gDtGkuNqUUJkwM" target="_blank" id="youtubeLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-md text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-[1.02]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3">
+                    <path fill-rule="evenodd" d="M19.897 1.503A1.125 1.125 0 0019.006 1h-14.01a1.125 1.125 0 00-.89.503L.368 11.233A2.25 2.25 0 002.378 14h3.987v3.75c0 .621.504 1.125 1.125 1.125h.75a1.125 1.125 0 001.125-1.125V14h3.75v3.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V14h3.987a2.25 2.25 0 002.01-2.767L19.898 1.503zM5.257 12a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zm13.486 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" clip-rule="evenodd" />
+                </svg>
+                YouTubeで聴く（手軽な視聴）
+            </a>
+        </div>
+
         <!-- インフォメーションカード -->
         <section class="mb-8 p-5 bg-indigo-50 rounded-lg border border-indigo-200">
             <h2 class="text-lg font-bold text-gray-700 mb-3">今回のサンプルについて</h2>
             <ul class="space-y-2 text-sm text-gray-600">
                 <li class="flex items-start">
                     <span class="text-indigo-500 mr-2">🌟</span>
-                    <span>目的: リップノイズ検証のためプロスタジオで収録したものです。</span>
+                    <span>**目的:** リップノイズ検証のためプロスタジオで収録したものです。</span>
                 </li>
                 <li class="flex items-start">
                     <span class="text-indigo-500 mr-2">📝</span>
-                    <span>原稿: 全て自身で作成いたしました。</span>
+                    <span>**原稿:** 全て自身で作成いたしました。</span>
                 </li>
                 <li class="flex items-start">
                     <span class="text-indigo-500 mr-2">✅</span>
-                    <span>次のステップ: ビジネス系サンプルの収録を予定しております。</span>
+                    <span>**次のステップ:** ビジネス系サンプルの収録を予定しております。</span>
                 </li>
             </ul>
         </section>
-
-        <!-- サンプル内容（タイムテーブル）カードの追加 -->
-        <section class="mb-8 p-5 bg-white rounded-lg border border-gray-200 shadow-inner">
-            <h2 class="text-lg font-bold text-gray-700 mb-3 border-b pb-2">▶ サンプル内容（タイムテーブル）</h2>
-            <ul class="space-y-2 text-sm text-gray-600">
-                <li class="flex justify-between items-start border-b border-dashed pb-1">
-                    <span class="font-semibold text-indigo-700">0:00 - 0:01</span>
-                    <span class="ml-4 text-gray-800 flex-1">名乗り・タイトルコール</span>
+        
+        <!-- サンプル内容（タイムテーブル）エリア -->
+        <section class="mb-8 p-5 bg-gray-100 rounded-lg border border-gray-300 shadow-inner">
+            <h2 class="text-lg font-bold text-gray-700 mb-3 flex items-center border-b pb-2">
+                <!-- 修正後の時計アイコン -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-2 text-indigo-600">
+                    <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" />
+                </svg>
+                サンプル内容（タイムテーブル）
+            </h2>
+            <ul class="space-y-2 text-sm text-gray-700">
+                <!-- 実際の秒数と内容に合わせて編集されたリスト -->
+                <li class="flex justify-between items-start border-b border-gray-200 pb-1">
+                    <span class="font-bold text-indigo-600 w-16">0:00〜0:01</span>
+                    <span class="flex-1 ml-4">名乗り・タイトルコール</span>
                 </li>
-                <li class="flex justify-between items-start border-b border-dashed pb-1">
-                    <span class="font-semibold text-indigo-700">0:02 - 0:38</span>
-                    <span class="ml-4 text-gray-800 flex-1">エンタメ・バラエティ番組ナレーション</span>
+                <li class="flex justify-between items-start border-b border-gray-200 pb-1">
+                    <span class="font-bold text-indigo-600 w-16">0:02〜0:38</span>
+                    <span class="flex-1 ml-4">エンタメ・バラエティ番組ナレーション</span>
                 </li>
-                <li class="flex justify-between items-start border-b border-dashed pb-1">
-                    <span class="font-semibold text-indigo-700">0:39 - 1:15</span>
-                    <span class="ml-4 text-gray-800 flex-1">ストーリーナレーション（しっとり・情感）</span>
+                <li class="flex justify-between items-start border-b border-gray-200 pb-1">
+                    <span class="font-bold text-indigo-600 w-16">0:39〜1:15</span>
+                    <span class="flex-1 ml-4">ストーリーナレーション（しっとり・情感）</span>
                 </li>
-                <li class="flex justify-between items-start">
-                    <span class="font-semibold text-indigo-700">1:16 - 1:32</span>
-                    <span class="ml-4 text-gray-800 flex-1">玩具CM（元気な少年キャラクター）</span>
+                <li class="flex justify-between items-start border-b border-gray-200 pb-1">
+                    <span class="font-bold text-indigo-600 w-16">1:16〜1:32</span>
+                    <span class="flex-1 ml-4">玩具CM（元気な少年キャラクター）</span>
                 </li>
-                 <li class="flex justify-between items-start">
-                    <span class="font-semibold text-indigo-700">1:33 - 2:11</span>
-                    <span class="ml-4 text-gray-800 flex-1">ボイスオーバー（サスペンス・独白）</span>
+                <li class="flex justify-between items-start border-b border-gray-200 pb-1">
+                    <span class="font-bold text-indigo-600 w-16">1:33〜2:11</span>
+                    <span class="flex-1 ml-4">ボイスオーバー（サスペンス・独白）</span>
                 </li>
-                <li class="flex justify-between items-start">
-                    <span class="font-semibold text-indigo-700">2:12 - 2:43</span>
-                    <span class="ml-4 text-gray-800 flex-1">CMナレーション（落ち着き・安心感）</span>
+                <li class="flex justify-between items-start pt-1">
+                    <span class="font-bold text-indigo-600 w-16">2:12〜2:43</span>
+                    <span class="flex-1 ml-4">CMナレーション（落ち着き・安心感）</span>
                 </li>
             </ul>
             <p class="mt-3 text-xs text-gray-500 text-right">※秒数は目安です。</p>
         </section>
 
-        <!-- アクセスボタンエリア -->
-        <div class="space-y-4">
-            <!-- ボタン1: YouTube (手軽な視聴) -->
-            <a href="https://youtu.be/4z1G71539NI?si=W5gDtGkuNqUUJkwM" target="_blank" id="youtubeLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-[1.02]">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3">
-                    <path fill-rule="evenodd" d="M19.897 1.503A1.125 1.125 0 0019.006 1h-14.01a1.125 1.125 0 00-.89.503L.368 11.233A2.25 2.25 0 002.378 14h3.987v3.75c0 .621.504 1.125 1.125 1.125h.75a1.125 1.125 0 001.125-1.125V14h3.75v3.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V14h3.987a2.25 2.25 0 002.01-2.767L19.898 1.503zM5.257 12a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zm13.486 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" clip-rule="evenodd" />
-                </svg>
-                YouTubeで聴く（手軽な視聴）
-            </a>
-
-            <!-- ボタン2: WAVファイルダウンロード (検証用高音質データ) -->
-            <!-- Google Driveを使用する場合: 共有リンクからFILE_IDを抽出し、以下の形式に変換してください: -->
-            <!-- https://drive.google.com/uc?export=download&id=FILE_ID -->
-            <a href="https://drive.google.com/uc?export=download&id=1h8Tlge-HuUfm8ItQlxkDJ8mHlqKg1BOZ" target="_blank" id="wavLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-[1.02]">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3">
-                    <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.44-3.44a.75.75 0 111.06 1.06l-4.75 4.75a.75.75 0 01-1.06 0l-4.75-4.75a.75.75 0 111.06-1.06l3.44 3.44V3a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                    <path fill-rule="evenodd" d="M15.75 16.75a.75.75 0 01-.75.75H9a.75.75 0 010-1.5h6a.75.75 0 01.75.75zM12 18.75a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
-                </svg>
-                高音質WAVファイルをダウンロード
-            </a>
-        </div>
 
         <!-- フッター/注意事項 -->
         <footer class="mt-8 pt-4 border-t border-gray-200 text-center">
-            <!-- 期限に関する記述を削除し、長期公開の意図を反映 -->
             <p class="text-xs text-gray-500 mb-2">
                 ※WAVファイルは長期に渡り公開しておりますので、いつでもご確認いただけます。
             </p>
             <p class="text-sm font-medium text-gray-600">
-                <!-- ここに新しく作成したナレーション専用のメールアドレスを記載してください -->
-                ご連絡先: 【<a href="mailto:mizuho_voice-na@yahoo.co.jp">mizuho_voice-na@yahoo.co.jp</a>】
+                ご連絡先: <a href="mailto:mizuho_voice-na@yahoo.co.jp" class="text-indigo-600 hover:text-indigo-800 transition duration-150">mizuho_voice-na@yahoo.co.jp</a>
             </p>
         </footer>
     </div>
