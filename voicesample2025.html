@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ボイスサンプル - 小島 美寿穂</title>
+    <!-- Tailwind CSS CDNを読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* カスタムフォントと基本設定 */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;700&display=swap');
+        body {
+            font-family: 'Noto Sans JP', 'Inter', sans-serif;
+            background-color: #f4f7f9; /* わずかに青みがかった背景 */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-xl bg-white shadow-2xl rounded-xl p-6 sm:p-10 border-t-8 border-indigo-600 transform transition-all hover:shadow-3xl">
+        
+        <!-- ヘッダーエリア -->
+        <header class="text-center mb-8">
+            <!-- プロフィール写真の追加 -->
+            <!-- Placeholderとしてアップロード画像を参照します。実際にアップロードする際は画像ファイルをサーバーに配置してください。 -->
+            <div class="mb-4">
+                <img 
+                    src="uploaded:IMG_4085.jpg-02b48397-a0aa-41b5-9e65-d3f2441d1eaa" 
+                    alt="小島 美寿穂 公式プロフィール写真" 
+                    class="w-24 h-24 object-cover rounded-full mx-auto border-4 border-white shadow-md"
+                    onerror="this.onerror=null; this.src='https://placehold.co/96x96/6366f1/ffffff?text=Photo';" 
+                >
+            </div>
+            
+            <h1 class="text-3xl font-extrabold text-gray-800 mb-1 tracking-tight">小島 美寿穂</h1>
+            <p class="text-xl font-semibold text-indigo-600">Voice Sample Access Portal</p>
+        </header>
+
+        <!-- インフォメーションカード -->
+        <section class="mb-8 p-5 bg-indigo-50 rounded-lg border border-indigo-200">
+            <h2 class="text-lg font-bold text-gray-700 mb-3">今回のサンプルについて</h2>
+            <ul class="space-y-2 text-sm text-gray-600">
+                <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2">🌟</span>
+                    <span>**目的:** リップノイズ検証のためプロスタジオで収録したものです。</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2">📝</span>
+                    <span>**原稿:** 全て自身で作成いたしました。</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-indigo-500 mr-2">✅</span>
+                    <span>**次のステップ:** ビジネス系サンプルの収録を予定しております。</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- アクセスボタンエリア -->
+        <div class="space-y-4">
+            <!-- ボタン1: YouTube (手軽な視聴) -->
+            <a href="#YOUTUBE_LINK" target="_blank" id="youtubeLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-white bg-red-600 hover:bg-red-700 transition duration-300 ease-in-out transform hover:scale-[1.02]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3">
+                    <path fill-rule="evenodd" d="M19.897 1.503A1.125 1.125 0 0019.006 1h-14.01a1.125 1.125 0 00-.89.503L.368 11.233A2.25 2.25 0 002.378 14h3.987v3.75c0 .621.504 1.125 1.125 1.125h.75a1.125 1.125 0 001.125-1.125V14h3.75v3.75c0 .621.504 1.125 1.125 1.125h.75c.621 0 1.125-.504 1.125-1.125V14h3.987a2.25 2.25 0 002.01-2.767L19.898 1.503zM5.257 12a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0zm13.486 0a1.5 1.5 0 10-3 0 1.5 1.5 0 003 0z" clip-rule="evenodd" />
+                </svg>
+                YouTubeで聴く（手軽な視聴）
+            </a>
+
+            <!-- ボタン2: WAVファイルダウンロード (検証用高音質データ) -->
+            <a href="#GIGAFILE_LINK" target="_blank" id="wavLink" class="w-full flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-lg shadow-lg text-white bg-indigo-600 hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-[1.02]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5 mr-3">
+                    <path fill-rule="evenodd" d="M12 2.25a.75.75 0 01.75.75v11.69l3.44-3.44a.75.75 0 111.06 1.06l-4.75 4.75a.75.75 0 01-1.06 0l-4.75-4.75a.75.75 0 111.06-1.06l3.44 3.44V3a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                    <path fill-rule="evenodd" d="M15.75 16.75a.75.75 0 01-.75.75H9a.75.75 0 010-1.5h6a.75.75 0 01.75.75zM12 18.75a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+                </svg>
+                高音質WAVファイルをダウンロード（先生の検証用）
+            </a>
+        </div>
+
+        <!-- フッター/注意事項 -->
+        <footer class="mt-8 pt-4 border-t border-gray-200 text-center">
+            <!-- 期限に関する記述を削除し、長期公開の意図を反映 -->
+            <p class="text-xs text-gray-500 mb-2">
+                ※WAVファイルは長期に渡り公開しておりますので、いつでもご確認いただけます。
+            </p>
+            <p class="text-sm font-medium text-gray-600">
+                <!-- ここに新しく作成したナレーション専用のメールアドレスを記載してください -->
+                ご連絡先: 【mizuho_voice-na@yahoo.co.jp など】
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
